@@ -18,15 +18,6 @@ http://www.w3.org/TR/html4/loose.dtd">
         echo '<form name="input" action="" method="POST">
     Nombre del alumno: <input type="text" name="nombre" />';
 
-        if ($_POST && ($_POST['nombre'] != "")) {
-            $aux = $_POST['nombre'];
-            echo 'value="' . $aux . '"/>';
-        }
-
-        if ($_POST && ($_POST['nombre'] == "")) {
-            $aux = $_POST['nombre'];
-            echo "<span style ='color:red'>;------------Debe introducir un nombre</span>";
-        }
 
         echo '<p>Módulos que cursa:</p>
         <input type="checkbox" name="modulos[]" value="DWES" /> Desarrollo web en entorno
