@@ -1,0 +1,23 @@
+<?php
+function &numeros(){
+
+echo "Los numeros no deben repetirse: ";
+for($x=0;$x<4;$x++) $ns[$x]="";
+
+    for ($i=0; $i <4 ; $i++) { 
+          $temp =rand(0,9);
+     for($x=0;($x<$i)&&($temp!=$ns[$x]);$x++);
+     if($temp==$ns[$x]){
+
+         $i--;
+     }
+     else{
+    $ns[$i]=$temp;
+     }
+
+    }
+    return $ns;
+    }
+
+
+?>
