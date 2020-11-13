@@ -1,43 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset=utf-8" />
+    <title>Calculadora</title>
 </head>
 
 <body>
+    <h1> Calculadora</h1>
+    <form action="2.php" method="post">
+        n1: <input type="text" size="20" maxlength="20" name="primera">
+        n2: <input type="text" size="20" maxlength="20" name="segunda">
+        <select name="operador">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
 
-    <?php
-
-
-    function esPar($numero)
-    {
-        if ($numero == 1) {
-            return false;
-        } else if ($numero == 0) {
-            return true;
-        } else {
-            $aux = $numero - 2;
-            $retorno = esPar($aux);
-            comprobar($aux);
-            return $retorno;
-        }
-    }
-
-    $num = 6;
-    if (esPar($num) == true)
-        echo $num . ' es par<br/>';
-    else
-        echo $num . ' es impar<br/>';
-
-    function comprobar($numero)
-    {
-
-        echo 'el valor de $aux es: ' . $numero . '<br/>';
-    }
-    ?>
+        <input type="submit" name="submit" value="enviar">
+    </form>
 </body>
 
 </html>
