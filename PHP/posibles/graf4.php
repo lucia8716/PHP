@@ -15,8 +15,16 @@ for ($i = 0; $i <= 20; $i++) {
     $y2 = rand(0, 100);
     $y1 = rand(0, 100);
 
-    imageline($imagen, $x1, $y1, $x2, $y2, $verdeLineas);
-}
+
+    for ($i = 0; $i <= 20; $i++) {
+
+        $x1 = rand(0, 100);
+        $x2 = rand(0, 100);
+        $y2 = rand(0, 100);
+        $y1 = rand(0, 100);
+    
+        imageline($imagen, $x1, $y1, $x2, $y2, $verdeLineas);
+    }
 
 
 

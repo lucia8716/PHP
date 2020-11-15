@@ -13,7 +13,9 @@ http://www.w3.org/TR/html4/loose.dtd">
 <body>
     <?php
 
-
+    foreach ($_POST['modulos'] as $selected) {
+        $verficar = $selected;
+    }
 
     if (!$_POST || $_POST['nombre'] == "" || !isset($_POST['modulos'])) {
         echo '<form name="input" action="" method="POST">
@@ -43,12 +45,17 @@ http://www.w3.org/TR/html4/loose.dtd">
     }
     $verficar;
 
-    foreach ($_POST['modulos'] as $selected) {
-        $verficar = $selected;
-    }
+
 
 
     if ($_POST && isset($_POST['modulos']) && $verficar == "DWES") {
+
+        $aux = $_POST['nombre'];
+        echo '<form name="input" action="" method="POST">
+        Nombre del alumno: <input type="text" name="nombre" value="' . $aux . '"/><br />';
+
+        echo '<p>Módulos que cursa:</p>';
+
         echo '<input type="checkbox" name="modulos[]" value="DWES" checked/> Desarrollo web en entorno
             servidor';
         echo '<br /><input type="checkbox" name="modulos[]" value="DWEC" /> Desarrollo web en entorno
@@ -59,6 +66,13 @@ http://www.w3.org/TR/html4/loose.dtd">
     }
 
     if ($_POST && isset($_POST['modulos']) && $verficar == "DWEC") {
+
+        $aux = $_POST['nombre'];
+        echo '<form name="input" action="" method="POST">
+        Nombre del alumno: <input type="text" name="nombre" value="' . $aux . '"/><br />';
+
+        echo '<p>Módulos que cursa:</p>';
+
         echo '<input type="checkbox" name="modulos[]" value="DWES"/> Desarrollo web en entorno
             servidor';
         echo '<br /><input type="checkbox" name="modulos[]" value="DWEC" checked/> Desarrollo web en entorno
